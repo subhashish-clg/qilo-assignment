@@ -3,6 +3,7 @@ import time
 import google.generativeai as genai
 import json
 import os
+from dotenv import load_dotenv
 from llama_index.embeddings.gemini import GeminiEmbedding
 from llama_index.llms.gemini import Gemini
 from llama_index.core.vector_stores import SimpleVectorStore
@@ -14,6 +15,9 @@ from llama_index.core import (
     load_indices_from_storage,
     load_graph_from_storage,
 )
+
+
+load_dotenv()
 
 
 # Using the embedding model to Gemini
