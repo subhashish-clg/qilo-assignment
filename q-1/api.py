@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 
 class Todo(BaseModel):
-    id: int
+    id: Union[int, None]
     status: bool
     message: str
 
